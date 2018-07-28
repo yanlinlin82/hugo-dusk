@@ -2,7 +2,8 @@
 
   <div class="post-footer-data">
     {{ partial "tags.html" . }}
-    <div class="date"> {{ .Date.Format "Jan 2, 2006" }} </div>
+    <div class="date">发布于：{{ printf "%d年%d月%d日 %d时%d分" .Lastmod.Year .Lastmod.Month .Lastmod.Day .Lastmod.Hour .Lastmod.Minute }}</div>
+    {{ if ne .Date .Lastmod }}<div class="date">最后更新于：{{ printf "%d年%d月%d日 %d时%d分" .Date.Year .Date.Month .Date.Day .Date.Hour .Date.Minute }}</div>{{ end }}
   </div>
 
 </footer>

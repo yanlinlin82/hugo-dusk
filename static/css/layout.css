@@ -128,6 +128,10 @@ th, td {
   margin-bottom: 0.2em;
 }
 
+.header-bar {
+  border-bottom: 1px dotted white;
+}
+
 .siteTitle a {
   text-decoration: none;
 }
@@ -311,7 +315,7 @@ th, td {
 }
 
 .post-list .title {
-  margin-bottom: 0em;
+  margin-bottom: 0.2em;
 }
 
 .tag {
@@ -356,7 +360,8 @@ th, td {
 }
 
 .rmore {
-  white-space:nowrap; 
+  font-style: italic;
+  white-space: nowrap;
   padding: 0 0 0 0.3em;
 }
 

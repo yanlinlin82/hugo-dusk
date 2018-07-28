@@ -2,6 +2,6 @@
     <a href="{{ .Permalink }}">
     <div class="post-list"> <h3 class="title"> {{ .Title }} </h3> </div>
     </a>
+    <div class="date"> 发布于：{{ printf "%d年%d月%d日 %d时%d分" .Date.Year .Date.Month .Date.Day .Date.Hour .Date.Minute }} </div>
     {{ partial "tags.html" . }}
-    <div class="date"> {{ .Date.Format "Jan 2, 2006" }} </div>
 </div>

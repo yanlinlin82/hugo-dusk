@@ -6,7 +6,7 @@
 
 <div class="content-list">
 {{ range .Data.Pages.GroupByDate "2006" }}
-<div class="content-list-date">{{ .Key }}</div>
+<div class="content-list-date">{{ .Key }}年</div>
   {{ range .Pages }}
   {{ .Render "li"}}
   {{ end }}

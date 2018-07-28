@@ -3,14 +3,14 @@
   <header>
     <h2 class="title"> <a href='{{ .Permalink }}'> {{ .Title }}</a> </h2>
     <div class="meta">
-      {{ .Date.Format "Jan 2, 2006" }} - {{ .ReadingTime }} minutes
+      发布于：{{ printf "%d年%d月%d日 %d时%d分" .Date.Year .Date.Month .Date.Day .Date.Hour .Date.Minute }}
     </div>
     {{ partial "tags.html" . }}
   </header>
 
   <div class="summary">
     {{ .Summary }}
-    <a href='{{ .Permalink }}' class="rmore">Read more ...</a>
+    <a href='{{ .Permalink }}' class="rmore">阅读更多&gt;&gt;</a>
   </div>
 
   <div class="rmore">
