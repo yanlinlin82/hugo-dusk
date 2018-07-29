@@ -16,8 +16,16 @@
   <a href="https://twitter.com/{{.}}" target="_blank"><div class="social-link">Twitter</div></a>
   {{end}}
 
+  {{with .Site.Params.facebook}}
+  <a href="https://www.facebook.com/{{.}}" target="_blank"><div class="social-link">Facebook</div></a>
+  {{end}}
+
   {{with .Site.Params.linkedin}}
   <a href="https://www.linkedin.com/in/{{.}}" target="_blank"><div class="social-link">LinkedIn</div></a>
+  {{end}}
+
+  {{with .Site.Params.weibo}}
+  <a href="http://weibo.com/{{.}}" target="_blank"><div class="social-link">微博</div></a>
   {{end}}
 
   <div class="social-link">
