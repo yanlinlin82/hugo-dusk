@@ -9,8 +9,7 @@
   </header>
 
   <div class="summary">
-    {{ .Summary }}
-    <a href='{{ .Permalink }}' class="rmore">阅读更多&gt;&gt;</a>
+    {{ truncate 200 .Summary }}
   </div>
 
   <div class="rmore">
