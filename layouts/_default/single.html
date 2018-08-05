@@ -2,6 +2,11 @@
 
 <article class="post">
     <h1 class="title"> {{ .Title }} </h1>
+    <div class="meta">
+      <div class="date">发布于：{{ printf "%d年%d月%d日 %d时%d分" .Lastmod.Year .Lastmod.Month .Lastmod.Day .Lastmod.Hour .Lastmod.Minute }}</div>
+      {{ if ne .Date .Lastmod }}<div class="date">更新于：{{ printf "%d年%d月%d日 %d时%d分" .Date.Year .Date.Month .Date.Day .Date.Hour .Date.Minute }}</div>{{ end }}
+      <div class="tags">{{ partial "tags.html" . }}</div>
+    </div>
     <div class="content"> {{ .Content }} </div>
     {{ partial "postfooter.html" . }}
 </article>

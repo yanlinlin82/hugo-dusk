@@ -1,9 +1,8 @@
 <footer class="post-footer">
 
   <div class="post-footer-data">
-    <div class="date">发布于：{{ printf "%d年%d月%d日 %d时%d分" .Lastmod.Year .Lastmod.Month .Lastmod.Day .Lastmod.Hour .Lastmod.Minute }}</div>
-    {{ if ne .Date .Lastmod }}<div class="date">最后更新于：{{ printf "%d年%d月%d日 %d时%d分" .Date.Year .Date.Month .Date.Day .Date.Hour .Date.Minute }}</div>{{ end }}
-    {{ partial "tags.html" . }}
+    {{ if .Prev }}{{ with .Prev }}<div>上一篇：<a href="{{ .Permalink }}">{{ .Title }}</a></div>{{ end }}{{ end }}
+    {{ if .Next }}{{ with .Next }}<div>下一篇：<a href="{{ .Permalink }}">{{ .Title }}</a></div>{{ end }}{{ end }}
   </div>
 
 </footer>

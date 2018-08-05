@@ -150,6 +150,12 @@ th, td {
 }
 
 .post .date {
+  margin: 0.5em 0em;
+  text-align: center;
+}
+
+.post .tags {
+  margin: 0.5em 0em;
   text-align: center;
 }
 
